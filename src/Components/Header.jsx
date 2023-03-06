@@ -68,7 +68,7 @@ import { setCategoryId } from '../redux/slices/filterSlice'
     <div className="menu-right">
       <div className="menu-right__contacts">
         <img src="./img/telephone.png"/>
-        <p>+994 50 514 79 76</p>
+        <p> 050 514 79 76</p>
       </div>
       {/* <Link to='/History'> */}
         <img src="./img/user.png" className="menu-right__user"/>
