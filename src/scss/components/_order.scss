@@ -1,0 +1,298 @@
+.order {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    .order__block {
+        display: flex;
+        @media (max-width: 428px) {
+            display: block;
+        }
+        .order-left {
+            justify-content: space-between;
+            .order-list {
+                h1 {
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 28px;
+                    line-height: 50px;
+                    color: #333333;
+                }
+                h2 {
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 26px;
+                    line-height: 20px;
+                    color: #000000;
+                }
+                .order-item__block {
+                    margin-right: 70px;
+                    width: 700px;
+
+                    .cart-item {
+                        display: flex;
+                        width: 100%;
+                        text-align: center;
+                        align-items: center;
+                        padding: 20px 0;
+                        border-top: 1px solid #ebebeb;
+                        margin-bottom: 45px;
+                        @media (max-width: 428px) {
+                            max-width: 316px;
+                            margin-bottom: 0;
+                            padding: 5px 0;
+                            height: 120px;
+                        }
+
+                        .cartItem__right {
+                            display: flex;
+                            align-items: center;
+                            @media (max-width: 428px) {
+                                display: block;
+                                margin-top: 35px;
+                            }
+                            .price {
+                                @media (max-width: 428px) {
+                                    position: relative;
+                                    top: -32px;
+                                    right: -19px;
+                                }
+                            }
+                            .cart-item__name {
+                                margin-right: 75px;
+                                min-width: 218px;
+                                @media (max-width: 428px) {
+                                    margin-bottom: 15px;
+                                }
+
+                                p {
+                                    margin-bottom: 15px;
+                                    @media (max-width: 428px) {
+                                        margin-bottom: 0;
+                                    }
+                                }
+                            }
+
+                            .top__price {
+                                margin-right: 40px;
+                                .item-count {
+                                    width: 116px;
+                                    display: flex;
+                                    background: #fcfcfc;
+                                    border: 0.903636px solid #ebebeb;
+                                    border-radius: 9.03636px;
+                                    height: 42px;
+                                    align-items: center;
+                                    // text-align: center;
+                                    justify-content: space-evenly;
+                                    position: relative;
+                                    // left: 20px;
+                                    top: -5px;
+                                    button {
+                                        // width: 20px;
+                                        background-color: #fcfcfc;
+                                        border: none;
+                                        width: 40px;
+                                    }
+                                    @media (max-width: 428px) {
+                                        width: 80px;
+                                        text-align: center;
+                                        height: 35px;
+                                        left: 40px;
+                                        button {
+                                            width: 20px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .cancelImg {
+                            width: 24px;
+                            height: 24px;
+                            margin-right: 15px;
+                        }
+                        .cartImg {
+                            width: 111px;
+                            height: 111px;
+                            margin-right: 38px;
+                            @media (max-width: 428px) {
+                                width: 80px;
+                                height: 80px;
+                                margin-right: 0;
+                                position: relative;
+                                top: 0px;
+                            }
+                        }
+
+                        p {
+                            font-style: normal;
+                            font-weight: 600;
+                            font-size: 18px;
+                            line-height: 21px;
+                            color: #000000;
+                        }
+                        .countImg {
+                            width: 128px;
+                            height: 47px;
+                            margin-right: 63px;
+                        }
+                        .span {
+                            font-style: normal;
+                            font-weight: 600;
+                            font-size: 20px;
+                            line-height: 24px;
+                            color: #000000;
+                        }
+                    }
+                }
+            }
+            .order-type {
+                @media (max-width: 428px) {
+                    margin-top: 15px;
+                }
+                .order-type__buttons {
+                    display: flex;
+                    .button {
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 14.6903px;
+                        line-height: 11px;
+                        color: #828282;
+                        background-color: white;
+                        border: none;
+                        margin-right: 19px;
+                        width: 152px;
+                        @media (max-width: 428px) {
+                            font-size: 10px;
+                            width: 50px;
+                        }
+                        &--active {
+                            font-style: normal;
+                            font-weight: 500;
+                            font-size: 14.6903px;
+                            line-height: 11px;
+                            color: #ffffff;
+                            width: 113.12px;
+                            height: 32.32px;
+                            background: #00ac4e;
+                            border-radius: 9.59274px;
+                            border: none;
+                            width: 152px;
+                            @media (max-width: 428px) {
+                                width: 120px;
+                                font-size: 12px;
+                                line-height: 10px;
+                            }
+                        }
+                    }
+                }
+                .order-type__summary {
+                    width: 465.68px;
+                    background: #ffffff;
+                    box-shadow: 0px 0px 28.763px rgba(0, 0, 0, 0.06);
+                    border-radius: 9.58767px;
+                    padding: 30px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    text-align: center;
+                    margin-top: 20px;
+                    @media (max-width: 428px) {
+                        width: 316px;
+                        padding: 5px;
+                        margin-top: 5px;
+                    }
+                    h3 {
+                        font-weight: 500;
+                        font-size: 18.0516px;
+                        line-height: 20px;
+                        color: #000000;
+                        @media (max-width: 428px) {
+                            font-size: 10px;
+                        }
+                    }
+                    h2 {
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 18.3403px;
+                        line-height: 23px;
+                        color: #000000;
+                        @media (max-width: 428px) {
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
+        }
+        .order-right {
+            .order-form {
+                .form-group {
+                    margin-bottom: 20px;
+                    label {
+                        width: 120px;
+                        font-family: "Helvetica";
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 15.6716px;
+                        line-height: 24px;
+                        color: #000000;
+                        margin-bottom: 5px;
+                    }
+                    input {
+                        width: 283px;
+                        height: 65.44px;
+
+                        /* Light Grey */
+                        background: #fcfcfc;
+
+                        /* Grey Main */
+                        border: 1.1194px solid #ebebeb;
+                        border-radius: 7.11356px;
+                    }
+                    .input-group-text {
+                        height: 66px;
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 15.6716px;
+                        line-height: 24px;
+                        color: #c6c6c6;
+                    }
+                    .labelComment {
+                        width: 283px;
+                        cursor: pointer;
+                        font-family: "Helvetica";
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 17.0726px;
+                        line-height: 24px;
+                        color: #00ac4e;
+                    }
+                    textarea {
+                        background: #fcfcfc;
+
+                        /* Grey Main */
+                        border: 1.1194px solid #ebebeb;
+                        border-radius: 7.11356px;
+                        resize: none;
+                    }
+                    .hidden {
+                        display: none;
+                    }
+                }
+                button {
+                    width: 183.58px;
+                    height: 58.21px;
+                    background: #00ac4e;
+                    border-radius: 5.59701px;
+
+                    font-family: "Helvetica";
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 15.6716px;
+                    line-height: 24px;
+                    text-align: center;
+                    color: #ffffff;
+                    border: none;
+                }
+            }
+        }
+    }
+}

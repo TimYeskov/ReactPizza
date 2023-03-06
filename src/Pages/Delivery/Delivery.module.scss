@@ -1,0 +1,47 @@
+.order{
+    padding-top: 45px;
+    padding-bottom: 60px;
+    h2{
+        margin-bottom: 25px;
+    }
+    p{
+        // font-family: 'TT Norms Pro';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 26px;
+        margin-bottom: 45px;
+        color: #828282;
+    }
+    .details{
+        display: flex;
+        align-items: center;
+        button{
+            width: 167.15px;
+            margin-right: 65px;
+            height: 53px;
+            background: #00AC4E;
+            border-radius: 6.90493px;
+            color: #FFFF;
+            // font-family: 'TT Norms Pro';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 21px;
+            text-align: center;
+            border: none;
+        }
+        h3{
+
+            // font-family: 'TT Norms Pro';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 22.2162px;
+            line-height: 29px;
+            text-align: center;
+            color: #00AC4E;
+            padding-right: 10px;
+            text-align: center;
+        }
+    }
+}
