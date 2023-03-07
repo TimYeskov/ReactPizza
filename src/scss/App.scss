@@ -475,6 +475,7 @@ header {
             font-size: 16px;
             line-height: 15px;
             color: #000000;
+            margin-bottom: 15px;
         }
     }
     .products-wrapper {
@@ -487,7 +488,7 @@ header {
 
         .product-block {
             margin-bottom: 57px;
-            flex: 1 0 205px;
+            flex: 1 0 1px;
             @media (max-width: 428px) {
                 max-width: 115px;
                 margin-bottom: 25px;
@@ -500,12 +501,15 @@ header {
             .img {
                 margin-bottom: 9px;
                 width: 205px;
+
                 img {
                     width: 100%;
                 }
                 @media (max-width: 428px) {
                     width: 87px;
                     margin-bottom: 5px;
+                    position: relative;
+                    left: 19px;
                 }
             }
             h3 {
@@ -517,20 +521,23 @@ header {
                 line-height: 23px;
                 color: #000000;
                 margin-bottom: 6px;
-                max-width: fit-content;
+                // max-width: fit-content;
 
                 flex-wrap: nowrap !important;
                 @media (max-width: 428px) {
                     font-family: "Helvetica";
                     font-style: normal;
                     font-weight: 600;
-                    font-size: 10px;
-                    line-height: 10px;
+                    font-size: 8px;
+                    line-height: 5px;
                     color: #000000;
-                    width: fit-content;
+                    // position: relative;
+                    // left: 12px;
+                    align-items: center;
+                    text-align: center;
                 }
             }
-            p {
+            .p-description {
                 font-style: normal;
                 font-weight: 500;
                 font-size: 14.674px;
@@ -542,21 +549,27 @@ header {
                 height: 70px;
                 // position: relative;
                 @media (max-width: 428px) {
-                    font-style: normal;
-                    font-weight: 400;
-                    font-size: 10px;
-                    line-height: 10px;
-                    color: #000000;
-                    max-width: 120px;
-                    height: 10px;
-                    margin-top: 5px;
+                    // font-style: normal;
+                    // font-weight: 400;
+                    // font-size: 10px;
+                    // line-height: 10px;
+                    // color: #000000;
+                    // max-width: 120px;
+                    // height: 10px;
+                    // margin-top: 5px;
+                    display: none;
                 }
             }
             .product__form {
                 justify-content: space-between;
                 width: 210px;
                 @media (max-width: 428px) {
-                    width: 90px;
+                    width: 100px;
+                    // align-items: center;
+                    // justify-content: center;
+                    // text-align: center;
+                    position: relative;
+                    left: 9px;
                 }
 
                 .form-block {
@@ -617,6 +630,9 @@ header {
                     margin-right: 4px;
                 }
                 margin-bottom: 5px;
+                @media (max-width: 428px) {
+                    text-align: center;
+                }
             }
             .product__price {
                 display: flex;
@@ -624,9 +640,12 @@ header {
                 @media (max-width: 428px) {
                     height: 20px;
                     align-items: center;
+                    text-align: center;
+                    justify-content: center;
                 }
                 p {
                     font-family: "Helvetica";
+
                     font-style: normal;
                     font-weight: 500;
                     font-size: 18.1056px;
@@ -647,7 +666,7 @@ header {
                     font-family: "Helvetica";
                     opacity: 0.5;
                     @media (max-width: 428px) {
-                        font-size: 14px;
+                        font-size: 10px;
                     }
                 }
             }
@@ -688,6 +707,9 @@ header {
                         color: #ffffff;
                     }
                 }
+                @media (max-width: 428px) {
+                    text-align: center;
+                }
             }
         }
         .product-block:not(:nth-child(4n)) {
@@ -698,7 +720,7 @@ header {
         }
         @media (max-width: 428px) {
             .product-block:not(:nth-child(2n)) {
-                margin-right: 110px;
+                margin-right: 0;
             }
         }
     }
@@ -811,6 +833,10 @@ footer {
     background-color: #00ac4e;
     padding-top: 10px;
     padding-bottom: 10px;
+    @media (max-width: 428px) {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
     .footer_blocks {
         display: flex;
         .about_us {
@@ -829,6 +855,10 @@ footer {
                     color: #ffffff;
                     margin: 0 !important;
                     opacity: 0.8;
+                    @media (max-width: 428px) {
+                        line-height: 15px;
+                        font-size: 10px;
+                    }
                 }
                 h3 {
                     // font-family: 'TT Norms Pro';
@@ -863,7 +893,7 @@ footer {
                     font-size: 12px;
                     line-height: 25px;
                     color: #ffffff;
-                    margin-bottom: 5px;
+                    margin-bottom: 0;
                 }
             }
             h2 {
@@ -878,8 +908,9 @@ footer {
                     font-style: normal;
                     font-weight: 500;
                     font-size: 12px;
-                    line-height: 25px;
+                    line-height: 15px;
                     color: #ffffff;
+                    margin-bottom: 0;
                 }
             }
             a {
@@ -893,17 +924,14 @@ footer {
                 margin-bottom: 10px;
                 @media (max-width: 428px) {
                     margin-bottom: 0;
+                    font-size: 12px;
+                    line-height: 10px;
+                    margin-bottom: 0;
                 }
             }
             .about__options {
                 display: flex;
-                @media (max-width: 428px) {
-                    font-style: normal;
-                    font-weight: 500;
-                    font-size: 12px;
-                    line-height: 25px;
-                    color: #ffffff;
-                }
+
                 h4 {
                     // font-family: 'TT Hoves';
                     font-style: normal;
@@ -912,6 +940,15 @@ footer {
                     line-height: 30px;
                     color: #ffffff;
                     margin-right: 34px;
+                    @media (max-width: 428px) {
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 10px;
+                        line-height: 10px;
+                        color: #ffffff;
+                        justify-content: space-between;
+                        margin-right: 0;
+                    }
                 }
             }
         }

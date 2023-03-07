@@ -2,9 +2,11 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    // @media (max-width: 428px) {
-    //     width: 200px;
-    // }
+    @media (max-width: 428px) {
+        width: 316px;
+        position: relative;
+        left: 20px;
+    }
     .imgPrev {
         width: 22px;
         height: 22px;

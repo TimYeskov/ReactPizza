@@ -52,7 +52,7 @@ const ProductBlock = ({id,imageUrl,title,decription,types,sizes,price,category,c
     </div>
 
     <Link to={`/FoodBlock/${id}`}><h3>{title}</h3></Link> 
-    <p>{decription}</p>
+    <p className='p-description'>{decription}</p>
 
     <div className='product__form'>
       <div className='form-block'>
@@ -83,7 +83,7 @@ const ProductBlock = ({id,imageUrl,title,decription,types,sizes,price,category,c
       <img src='./img/emptystar.svg'/>
     </div>
     <div className='product__price'>
-      <p>{price[activePriceIndex]}  ₼/кг</p>
+      <p >{price[activePriceIndex]}  ₼/кг</p>
       <span>За 500гр.</span>
     </div>
     <div className='product__button'>
