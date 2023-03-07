@@ -10,15 +10,17 @@ import { setCategoryId } from '../redux/slices/filterSlice'
 
    <div className="container">
     <Link to="/"><img className="navbar-brand" src="./img/newlogo.png"/></Link>
-  <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Переключатель навигации">
+  <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Переключатель навигации">
     <span className="navbar-toggler-icon"></span>
   </button>
   <div className="collapse navbar-collapse" id="navbarSupportedContent">
     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
     <li className="nav-item dropdown">
+        <img src='./img/mobileimg/menu.svg'/>
         <a className="nav-link " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
         Меню
         </a>
+        <img src='./img/mobileimg/arrow.svg' alt='arrow'/>
         <ul className="dropdown-menu">
           <li>
             <span  className="dropdown-item" onClick={()=>dispatch(setCategoryId(1))}><img src="./img/pizza1.svg"/>Мясные</span>
@@ -50,22 +52,40 @@ import { setCategoryId } from '../redux/slices/filterSlice'
        
       
       <Link to='/Delivery'>
+        
         <li className="nav-item">
-       <span className="nav-link active" aria-current="page" href="#">Доставка</span> 
+        <img src='./img/mobileimg/order.svg' className='nav-link__img'/>
+       <span className="nav-link active" aria-current="page" href="#">Доставка</span>
+       <img src='./img/mobileimg/arrow.svg' alt='arrow'/> 
+       
       </li>
       </Link>
       
     
     
       <li className="nav-item">
-      <Link to="/Payment"><span className="nav-link" href="#">Оплата</span></Link>
+      <Link to="/Payment">
+       <img src='./img/mobileimg/menu.svg' className='nav-link__img'/>
+        <span className="nav-link" href="#">Оплата</span>
+        <img src='./img/mobileimg/arrow.svg' alt='arrow'/>
+        
+        </Link>
       </li>
    
       <li className="nav-item">
-        <Link to='/Cart'><a className="nav-link" href="#">Корзина</a></Link>
+        <Link to='/Cart'>
+          <img src='./img/mobileimg/payment.svg'/>
+          <a className="nav-link" href="#">Корзина</a>
+          <img src='./img/mobileimg/arrow.svg' alt='arrow'/>
+
+          </Link>
       </li>
     </ul>
-    <div className="menu-right">
+   
+     
+   
+  </div>
+   <div className="menu-right">
       <div className="menu-right__contacts">
         <img src="./img/telephone.png"/>
         <p> 050 514 79 76</p>
@@ -76,9 +96,6 @@ import { setCategoryId } from '../redux/slices/filterSlice'
       <Link to='/Cart'><img src="./img/cart.png" className='menu-right__cart'/></Link>
 
     </div>
-     
-   
-  </div>
   </div>
 
 </nav>
