@@ -152,6 +152,9 @@ header {
                 }
             }
             .nav-item {
+                .img__opacity {
+                    opacity: 0.5;
+                }
                 img {
                     display: none;
                 }
@@ -199,7 +202,7 @@ header {
                         width: 72px;
                         margin: 0;
                         margin-left: 15px;
-                        margin-right: 95px;
+                        margin-right: 60px;
                         &:before {
                             width: 6px;
                             height: 18px;

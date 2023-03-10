@@ -1,4 +1,5 @@
 import React from 'react'
+import 'macro-css'
 import { useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { setCategoryId } from '../redux/slices/filterSlice'
@@ -54,9 +55,9 @@ import { setCategoryId } from '../redux/slices/filterSlice'
 
         
         <li className="nav-item disabled">
-        <img src='./img/mobileimg/order.svg' className='nav-link__img'/>
+        <img src='./img/mobileimg/order.svg' className='nav-link__img img__opacity'/>
        <span className="nav-link disabled span__disabled" aria-current="page" href="#">Доставка</span>
-       <img src='./img/mobileimg/arrow.svg' alt='arrow'/> 
+       <img src='./img/mobileimg/arrow.svg ' alt='arrow' className='img__opacity' /> 
        
       </li>
  
