@@ -18,10 +18,13 @@ const Order = () => {
         changeOrderDetail(!orderDetail)
         setActive(index)
        }
-  if(cartItems.length<=0){
+       console.log("orderItem",orderItem)
+       console.log("cartItems",cartItems)
+  if(orderItem.length===0 || cartItems.length<=0){
    return <EmptyPage/>
   } 
-  return (
+  else
+ return (
 
     <div className='container'>
         <div className='order'>
@@ -31,9 +34,9 @@ const Order = () => {
                         <h1>Оформление заказа</h1>
                          <h2>Вы заказали</h2>
                          <div className='order-item__block'>
-                            {orderFromCart ?  cartItems.map(obj=>
-                          <CartItem {...obj}/>
-                         ) :orderItem.map(obj=><CartItem {...obj}/>) }
+                            {orderItem.length===0 ?  cartItems.map(obj=>
+                          <CartItem {...obj}/>)
+                           :orderItem.map(obj=><CartItem {...obj}/>) }
                         
                          </div>
                     </div>

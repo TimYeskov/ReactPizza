@@ -60,7 +60,7 @@ const FoodBlock = () => {
     imageUrl:pizza.imageUrl,
     title:pizza.title,
     decription:pizza.decription,
-    price:pizza.price[activePriceIndex],
+    price:pizza.price[activePriceIndex]*count,
     sizes:pizza.sizes[activeSizeIndex],
     types:typeNames[activeTypeIndex],
     count:count,
@@ -128,7 +128,7 @@ const FoodBlock = () => {
             <div className='top__total-price'>
                 <div className='total-price'>
                     <p>Итого к оплате</p>
-                    <span>1 050  ₼</span>
+                    <span> {pizza.price[activePriceIndex]*item.count} ₼</span>
                 </div>
                 <div className='total-price__button'>
                     <Link to="/Order"><button className='button__buy' onClick={()=>dispatch(addItemFromItemPage(item))}>Купить</button></Link>
