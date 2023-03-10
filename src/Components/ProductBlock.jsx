@@ -48,7 +48,7 @@ const ProductBlock = ({id,imageUrl,title,decription,types,sizes,price,category,c
   return (
     <div className='product-block'>
     <div className='img'>
-      <img src={imageUrl} alt="ProductImg"/>
+    <Link to={`/FoodBlock/${id}`}><img src={imageUrl} alt="ProductImg"/></Link> 
     </div>
 
     <Link to={`/FoodBlock/${id}`}><h3>{title}</h3></Link> 
