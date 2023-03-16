@@ -1,7 +1,7 @@
 import React from 'react'
 import CartItem from './CartItem'
 // import "../scss/components/_cart.scss"
-const HistoryItem = () => {
+const HistoryItem:React.FC = () => {
   return (
     <div className='history_block'>
         <div className='block-left'>
@@ -28,8 +28,8 @@ const HistoryItem = () => {
 
         </div>
         <div className='block-right'>
-            <CartItem/>
-            <CartItem/>
+            {/* <CartItem/>
+            <CartItem/> */}
         </div>
     </div>
   )

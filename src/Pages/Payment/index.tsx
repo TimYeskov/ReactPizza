@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from "./Payment.module.scss"
-const Payment = () => {
+const Payment:React.FC = () => {
   return (
     <>
     <div className='container'>

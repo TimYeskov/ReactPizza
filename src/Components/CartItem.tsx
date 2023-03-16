@@ -2,8 +2,8 @@ import React from 'react'
 import { useDispatch } from 'react-redux'
 import "../scss/components/_cart.scss"
 
-import { minusItem,plusItem,removeItem } from '../redux/slices/cartSlice'
-const CartItem = ({imageUrl,price,title,count,sizes,types,hashedPizza}) => {
+import { CartItemsType, minusItem,plusItem,removeItem } from '../redux/slices/cartSlice'
+const CartItem:React.FC<CartItemsType> = ({imageUrl,price,title,count,sizes,types,hashedPizza}) => {
   const dispatch=useDispatch()
   let priceByCount=Math.round(count*price)
 

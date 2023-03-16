@@ -3,7 +3,8 @@ import 'macro-css'
 import { useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { setCategoryId } from '../redux/slices/filterSlice'
- const Header = () => {
+import Search from './Search'
+ const Header:React.FC = () => {
   const dispatch=useDispatch()
   return (
     <header>
@@ -52,28 +53,6 @@ import { setCategoryId } from '../redux/slices/filterSlice'
       </li>
        
       
-
-        
-        <li className="nav-item disabled">
-        <img src='./img/mobileimg/order.svg' className='nav-link__img img__opacity'/>
-       <span className="nav-link disabled span__disabled" aria-current="page" href="#">Доставка</span>
-       <img src='./img/mobileimg/arrow.svg ' alt='arrow' className='img__opacity' /> 
-       
-      </li>
- 
-      
-    
-      <Link to="/Order">
-      <li className="nav-item">
-    
-       <img src='./img/mobileimg/menu.svg' className='nav-link__img'/>
-        <span className="nav-link" href="#">Оплата</span>
-        <img src='./img/mobileimg/arrow.svg' alt='arrow'/>
-        
-      
-      </li>
-      </Link>
-   
       <Link to='/Cart'>
       <li className="nav-item">
       
@@ -83,6 +62,29 @@ import { setCategoryId } from '../redux/slices/filterSlice'
 
       </li>
       </Link>
+    
+      
+    
+      <Link to="/Order">
+      <li className="nav-item">
+    
+       <img src='./img/mobileimg/menu.svg' className='nav-link__img'/>
+        <span className="nav-link">Оплата</span>
+        <img src='./img/mobileimg/arrow.svg' alt='arrow'/>
+        
+      
+      </li>
+      </Link>
+          
+      <li className="nav-item">
+        {/* <img src='./img/mobileimg/order.svg' className='nav-link__img img__opacity'/> */}
+       {/* <span className="nav-link disabled span__disabled" aria-current="page">Доставка</span> */}
+        <Search/>
+       {/* <img src='./img/mobileimg/arrow.svg ' alt='arrow' className='img__opacity' /> 
+        */}
+      </li>
+ 
+
     </ul>
    
      

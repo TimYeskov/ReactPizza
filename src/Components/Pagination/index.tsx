@@ -4,7 +4,10 @@ import './Pagination.scss'
 // type PaginationProps={
 //   changePage:(page:number)=>void
 // }
-const PagePagination = ({onChangePage}) => {
+type PagePaginationProps={
+  onChangePage:(event:number)=>void
+}
+const PagePagination:React.FC<PagePaginationProps> = ({onChangePage}) => {
 
   return (
     <ReactPaginate
@@ -15,7 +18,6 @@ const PagePagination = ({onChangePage}) => {
     pageRangeDisplayed={3}
     pageCount={4}
     previousLabel={<img src='../img/prev.svg'  className='imgPrev'/>}
-    renderOnZeroPageCount={null}
   /> 
   )
 }

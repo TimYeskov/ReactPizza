@@ -1,6 +1,6 @@
 import React from 'react'
 
-const OrderBlock = () => {
+const OrderBlock:React.FC= () => {
   return (
     <div className='container'>
         <div className='row'>

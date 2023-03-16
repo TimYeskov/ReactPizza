@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 import '../scss/App.scss'
 
-const EmptyCart = () => {
+const EmptyCart:React.FC = () => {
   return (
     <div className='container'>
          <div className="cart--empty">

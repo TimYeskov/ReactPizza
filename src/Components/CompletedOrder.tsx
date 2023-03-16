@@ -1,7 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
-const CompletedOrder = () => {
+const CompletedOrder:React.FC = () => {
   return (
       <div className="cart cart--empty">
         <h2>Заказ Оформлен <span>😃</span></h2>

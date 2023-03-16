@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 
-const OrderFormBySelf = () => {
+const OrderFormBySelf:React.FC = () => {
 
     const [userName, setUserName] = useState('');
   const [number, setNumber] = useState('');
@@ -8,7 +8,7 @@ const OrderFormBySelf = () => {
   const [error, setError] = useState('');
 
 
-  const handleSubmit = (event) => {
+  const handleSubmit:React.FormEventHandler<HTMLFormElement>= (event) => {
     event.preventDefault();
 
     if (userName === '') {
@@ -34,29 +34,29 @@ const OrderFormBySelf = () => {
     <form onSubmit={handleSubmit} className="order-form">
 
 
-      <div class="form-group">
-        <label for="formGroupExampleInput2">ФИО</label>
+      <div className="form-group">
+        <label htmlFor="formGroupExampleInput2">ФИО</label>
         <input 
-        type="text" class="form-control"
+        type="text" className="form-control"
          id="formGroupExampleInput2" placeholder="Введите Ваше полное имя"
          value={userName}
           onChange={(event) => setUserName(event.target.value)}/>
       </div>
  
-  <label class="sr-only" for="inlineFormInputGroupUsername2">Телефон</label>
-  <div class="input-group mb-4 mr-sm-2">
-    <div class="input-group-prepend">
-      <div class="input-group-text">+994</div>
+  <label className="sr-only" htmlFor="inlineFormInputGroupUsername2">Телефон</label>
+  <div className="input-group mb-4 mr-sm-2">
+    <div className="input-group-prepend">
+      <div className="input-group-text">+994</div>
     </div>
-    <input type="text" class="form-control" id="inlineFormInputGroupUsername2" placeholder="Username"
+    <input type="text" className="form-control" id="inlineFormInputGroupUsername2" placeholder="Username"
         onChange={(event) => setNumber(event.target.value)}
         value={number}/>
   </div>
 
   
-  <div class="form-group col-md-8">
-      <label for="inputState">Когда заберете?</label>
-      <select id="inputState" class="form-control">
+  <div className="form-group col-md-8">
+      <label htmlFor="inputState">Когда заберете?</label>
+      <select id="inputState" className="form-control">
         <option selected>В ближайшее время</option>
         <option>в течении 40 мминут</option>
         <option>Дольше 40 минут</option>

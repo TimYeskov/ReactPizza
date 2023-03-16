@@ -5,10 +5,12 @@ import CartItem from '../Components/CartItem'
 import EmptyCart from './EmptyPage'
 import { makeOrderFromCart } from '../redux/slices/cartSlice'
 import Range from '../Components/Range'
-const Cart = ({obj}) => {
+import { RootState } from '../redux/store'
+
+const Cart:React.FC = () => {
   const dispatch=useDispatch()
-  const cartItems=useSelector((state)=>state.cartSlice.cartItems)
-  const totalPrice=useSelector(state=>state.cartSlice.totalPrice)
+  const cartItems=useSelector((state:RootState)=>state.cartSlice.cartItems)
+  const totalPrice=useSelector((state:RootState)=>state.cartSlice.totalPrice)
   const EndirimPrice=totalPrice-3
   if(cartItems.length>0){
   return (

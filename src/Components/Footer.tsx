@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Footer = () => {
+const Footer:React.FC = () => {
   return (
 <footer>
       <div className='container footer_blocks'>

@@ -12,19 +12,21 @@ import MenuSlider from '../Components/MenuSlider';
 import ProductBlock from '../Components/ProductBlock';
 import HomeVideo from '../Components/HomeVideo';
 import OrderBlock from '../Components/OrderBlock';
-
+import { useAppDispatch } from '../redux/store';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchPizzas } from '../redux/slices/pizzaSlice';
-const Home = () => {
-    const dispatch=useDispatch()
-    const items=useSelector(state=>state.pizzaSlice.items)
+import { RootState } from '../redux/store';
+const Home:React.FC = () => {
+    const dispatch=useAppDispatch()
+    const items=useSelector((state:RootState)=>state.pizzaSlice.items)
     const [pageCurrent,setPageCurent]=React.useState(1)
-    const categoryId=useSelector(state=>state.filterSlice.categoryId)
+    const categoryId=useSelector((state:RootState)=>state.filterSlice.categoryId)
+    const searchValue=useSelector((state:RootState)=>state.filterSlice.searchValue)
 
 
   React.useEffect(()=>{
     const getPizzas=async()=>{
-      dispatch(fetchPizzas({categoryId,pageCurrent}))
+      dispatch(fetchPizzas({categoryId,pageCurrent,searchValue}))
     }
     getPizzas()
    
@@ -34,14 +36,21 @@ const Home = () => {
   return (
     <div>
       <HomeSlider/>
-      <MenuSlider categoryId={categoryId}/>
+      <MenuSlider/>
 
       <div className='home-products'>
         <div className='container'>
           <div className='row'>
           <h2>Все товары</h2>
            <div className='products-wrapper'>
-            {items.map((obj)=><ProductBlock {...obj}/>)}
+            {items
+            .filter((obj)=>{
+              if(obj.title.toLowerCase().includes(searchValue.toLowerCase())){
+                return true
+              }
+              return false
+            })
+            .map((obj)=><ProductBlock {...obj}/>)}
           </div>
           </div>
         </div>

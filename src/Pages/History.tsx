@@ -1,7 +1,7 @@
 import React from 'react'
 import HistoryItem from '../Components/HistoryItem'
 
-const History = () => {
+const History:React.FC= () => {
   return (
     <div className='container'>
         <div className='history'>

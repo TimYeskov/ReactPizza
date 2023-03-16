@@ -1,6 +1,20 @@
-import { createSlice } from '@reduxjs/toolkit'
-
-const initialState = {
+import { createSlice, PayloadAction } from '@reduxjs/toolkit'
+export type CartItemsType={
+  imageUrl:string,
+  price:number,
+  title:string,
+  count:number,
+  sizes:number,
+  types:string,
+  hashedPizza:string
+}
+interface cartSliceState {
+  cartItems:CartItemsType[],
+  totalPrice:number,
+  orderItem:CartItemsType[],
+  orderFromCart:boolean
+}
+const initialState:cartSliceState = {
   cartItems: [],
   totalPrice:0,
   orderItem:[],
@@ -13,7 +27,7 @@ export const cartSlice = createSlice({
   name: 'cart',
   initialState,
   reducers: {
-    addItemToCart(state,action){
+    addItemToCart(state,action:PayloadAction<CartItemsType>){
       const findItem=state.cartItems.find(obj=>obj.hashedPizza===action.payload.hashedPizza)
       if(findItem)
         findItem.count=findItem.count+action.payload.count
@@ -22,20 +36,20 @@ export const cartSlice = createSlice({
         }
         state.totalPrice= state.cartItems.reduce((sum,obj)=>{return Math.round((obj.price*obj.count)+sum)},0)
     },
-    plusItem(state,action){
+    plusItem(state,action:PayloadAction<string>){
       const findItem=state.cartItems.find(obj=>obj.hashedPizza===action.payload)
       if(findItem)
         findItem.count++
         state.totalPrice= state.cartItems.reduce((sum,obj)=>{return Math.round((obj.price*obj.count)+sum)},0)
        
     },
-    minusItem(state,action){
+    minusItem(state,action:PayloadAction<string>){
       const findItem=state.cartItems.find(obj=>obj.hashedPizza===action.payload)
       if(findItem)
         findItem.count--
         state.totalPrice= state.cartItems.reduce((sum,obj)=>{return Math.round((obj.price*obj.count)+sum)},0)
     },
-    removeItem(state,action){
+    removeItem(state,action:PayloadAction<string>){
       state.cartItems=state.cartItems.filter(obj=>obj.hashedPizza!==action.payload)
       state.totalPrice= state.cartItems.reduce((sum,obj)=>{return Math.round((obj.price*obj.count)+sum)},0)
     },

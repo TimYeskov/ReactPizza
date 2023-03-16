@@ -6,21 +6,22 @@ import '../scss/App.scss'
 import { useParams } from 'react-router'
 import OrderBlock from '../Components/OrderBlock'
 import { Link } from 'react-router-dom'
-import { addItemToCart,addItemFromItemPage } from '../redux/slices/cartSlice'
+import { addItemToCart,addItemFromItemPage, CartItemsType } from '../redux/slices/cartSlice'
 import { useDispatch } from 'react-redux'
-const FoodBlock = () => {
+import { itemsType } from '../redux/slices/pizzaSlice'
+const FoodBlock:React.FC = () => {
     const dispatch=useDispatch()
   const [activeSizeIndex,setActiveSizeIndex]=React.useState(0)
   const [activeTypeIndex,setActiveTypeIndex]=React.useState(0)
   const[activePriceIndex,setActivePriceindex]=React.useState(0)
   const  typeNames=['тонкое','традиционное']
-  const onChangePrice=(index)=>{
+  const onChangePrice=(index:number)=>{
   setActivePriceindex(index)
     setActiveSizeIndex(index)
   }
   
 
-    const [pizza,setPizza]=React.useState()
+    const [pizza,setPizza]=React.useState<itemsType>()
     const [about,changeAbout]=React.useState(true)
     const [active,setActive]=React.useState(0)
    
@@ -45,16 +46,16 @@ const FoodBlock = () => {
     
     let [count,setCount]=React.useState(1)
     if(!pizza){
-        return "загрузка"
+        return <>загрузка</>
     }
     
     let details=['О товаре','Параметры']
-   const onClickChange=(index)=>{
+   const onClickChange=(index:number)=>{
     changeAbout(!about)
     setActive(index)
    }
 
-
+    
    const item={
     id:pizza.id,
     imageUrl:pizza.imageUrl,

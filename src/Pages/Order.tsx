@@ -3,18 +3,19 @@ import { useSelector } from 'react-redux'
 import CartItem from '../Components/CartItem'
 import OrderForm from '../Components/OrderForm'
 import OrderFormBySelf from '../Components/OrderFormBySelf'
+import { RootState } from '../redux/store'
 import EmptyPage from './EmptyPage'
-const Order = () => {
-    const {cartItems,orderFromCart,orderItem}=useSelector((state)=>state.cartSlice)
+const Order:React.FC = () => {
+    const {cartItems,orderFromCart,orderItem}=useSelector((state:RootState)=>state.cartSlice)
 
     const [active,setActive]=React.useState(0)
-    const totalPrice=useSelector((state)=>state.cartSlice.totalPrice)
+    const totalPrice=useSelector((state:RootState)=>state.cartSlice.totalPrice)
     const endirimPrice=totalPrice-3
 
     const orderDetails=['Доставка','Самовывоз(-20%)']
     const[orderDetail,changeOrderDetail]=React.useState(true)
 
-    const onClickChange=(index)=>{
+    const onClickChange=(index:number)=>{
         changeOrderDetail(!orderDetail)
         setActive(index)
        }

@@ -5,7 +5,7 @@ import 'swiper/scss';
 import 'swiper/scss/navigation';
 import 'swiper/scss/pagination';
 import React from 'react'
-const HomeSlider = () => {
+const HomeSlider:React.FC= () => {
   return (
     <div className="home-slider">
     <div className="container">

@@ -2,11 +2,11 @@ import React from 'react'
 import { useDispatch,useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import hash from 'object-hash'
-
+import { itemsType } from '../redux/slices/pizzaSlice'
 import { addItemToCart} from '../redux/slices/cartSlice'
 import FoodBlock from '../Pages/FoodBlock'
 
-const ProductBlock = ({id,imageUrl,title,decription,types,sizes,price,category,count}) => {
+const ProductBlock:React.FC<itemsType> = ({id,imageUrl,title,decription,types,sizes,price}) => {
   const dispatch=useDispatch()
   //стейт для типа пиццы данной карточки
   const [isReady,setIsReady]=React.useState(false)
@@ -17,7 +17,7 @@ const ProductBlock = ({id,imageUrl,title,decription,types,sizes,price,category,c
 
   const  typeNames=['тонкое','традиционное']
 
-  const onChangePrice=(index)=>{
+  const onChangePrice=(index:number)=>{
   setActivePriceindex(index)
     setActiveSizeIndex(index)
   }
