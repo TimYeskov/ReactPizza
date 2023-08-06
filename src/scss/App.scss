@@ -1,5 +1,11 @@
 @import "./components/all";
+::-webkit-scrollbar {
+  width: 5px;
+}
 
+::-webkit-scrollbar-thumb {
+  background: #83838398;
+}
 body {
     // font-family: 'TT Norms Pro';
     font-size: 16px;
