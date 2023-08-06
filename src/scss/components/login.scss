@@ -1,0 +1,297 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Прозрачный черный цвет */
+  z-index: 9999; /* Устанавливаем высокий z-index, чтобы затемнение было поверх остальных элементов */
+}
+.containerr {
+  border-radius: 9px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  color: black;
+  z-index: 9999;
+
+  .container__header {
+    padding: 0 40px;
+
+    margin-top: 40px;
+    div {
+      justify-content: space-between;
+      display: flex;
+      position: relative;
+      img {
+        width: 50px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        cursor: pointer;
+      }
+      .cancel {
+        width: 20px;
+        height: 20px;
+      }
+    }
+    h2 {
+      font-weight: 400;
+      text-align: center;
+      font-size: 29px;
+      padding-bottom: 19px;
+      border-bottom: 1px solid #eeeef8;
+      margin-bottom: 19px;
+      color: #4caf50;
+    }
+  }
+  .container__wrapper {
+    padding: 0 155px;
+    padding-bottom: 50px;
+    .container__options {
+      display: flex;
+
+      justify-content: space-between;
+      h2 {
+        font-size: 29px;
+        font-weight: 800;
+        margin-top: 0;
+        cursor: pointer;
+        transition: color 0.2s;
+      }
+      h2:hover {
+        color: #4caf50;
+      }
+    }
+    .container__login {
+      form {
+        display: flex;
+        flex-direction: column;
+
+        input {
+          border-radius: 9px;
+          padding: 12px;
+          padding-right: 80px;
+          border: 2px solid #eeeef8;
+          margin-bottom: 19px;
+          font-size: 16px;
+          box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2);
+          transition: border-color 0.2s;
+        }
+        input:focus {
+          border-color: #4caf50;
+          border-width: 2px;
+          border-style: solid;
+          outline: none;
+        }
+      }
+    }
+    .container__signUp {
+      form {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 15px;
+
+        .nameSurname {
+          display: flex;
+          justify-content: space-between;
+        }
+        label {
+          display: block;
+          margin-bottom: 3px;
+          font-weight: 200;
+          font-size: 14px;
+        }
+        input {
+          border-radius: 9px;
+          padding: 10px;
+          padding-right: 0px;
+          border: 1px solid #0e55a7;
+          margin-bottom: 15px;
+          font-size: 14px;
+          box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2);
+          transition: border-color 0.2s;
+          margin-bottom: 15px;
+          @media (max-width: 520px) {
+            font-size: 5px;
+          }
+        }
+        input:focus {
+          border-color: #4caf50;
+          border-width: 1px;
+          border-style: solid;
+          outline: none;
+        }
+
+        .signupName {
+          margin-right: 20px;
+        }
+      }
+      .custom-select {
+        appearance: none;
+        background-color: transparent;
+        border: none;
+        border: 1px solid #0e55a7;
+        border-radius: 9px;
+        font-size: 14px;
+        padding: 12px;
+        color: #0e55a7;
+
+        margin: 0 auto;
+        width: 200px;
+        margin-bottom: 0;
+        transition: border-color 0.2s;
+        @media (max-width: 520px) {
+          font-size: 5px;
+        }
+      }
+
+      .custom-select:focus {
+        outline: none;
+
+        border-color: #4caf50;
+        border-width: 1px;
+        border-style: solid;
+      }
+
+      .option__disabled {
+        margin: 0 auto;
+        padding-left: 10px;
+        display: none;
+      }
+
+      .custom-select option[value=""] {
+        display: none;
+      }
+    }
+    .container__settings {
+      display: flex;
+      align-items: center;
+      padding: 0 40px;
+      justify-content: space-evenly;
+      margin-bottom: 15px;
+
+      h4,
+      a {
+        font-size: 14px;
+      }
+      h4 {
+        margin-right: 20px;
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+    }
+    .loginBtn {
+      width: 50%;
+      display: flex;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+      font-size: 14px;
+      font-weight: 700;
+      text-align: center;
+      background-color: #0e55a7;
+      color: white;
+      border: none;
+      border-radius: 9px;
+      padding: 20px 110px;
+
+      margin-top: 15px;
+      cursor: pointer;
+    }
+    .underBtn {
+      font-size: 13px;
+      text-align: center;
+      align-items: center;
+      font-weight: 400;
+      padding-bottom: 25px;
+      border-bottom: 1px solid var(--color-border__login);
+      span {
+        font-weight: 700;
+        color: #4caf50;
+      }
+    }
+    .googleReg {
+      background-color: transparent;
+      border: 1px solid #0e55a7;
+      border-radius: 9px;
+      padding: 0px 20px;
+      margin: 0 auto;
+      display: flex;
+      text-align: center;
+      align-items: center;
+      img {
+        margin-right: 10px;
+      }
+      h4 {
+        font-size: 16px;
+        color: var(--color-font__login);
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    .container__header {
+      padding: 0 20px;
+    }
+    .container__wrapper {
+      padding: 0 70px 25px 70px;
+    }
+  }
+  @media (max-width: 510px) {
+    .container__header {
+      padding: 0 10px;
+      margin-top: 20px;
+      h2 {
+        font-size: 13px;
+        margin: 0;
+      }
+      .cancel {
+        width: 10px !important;
+      }
+    }
+    .container__wrapper {
+      padding: 20px 40px;
+      .container__options {
+        h2 {
+          font-size: 13px;
+        }
+      }
+      .container__login,
+      .container__signUp {
+        form {
+          input {
+            font-size: 10px;
+            padding: 5px;
+            margin-bottom: 8px;
+          }
+        }
+      }
+      .container__settings {
+        h4,
+        a {
+          font-size: 10px;
+        }
+      }
+      .loginBtn {
+        font-size: 10px;
+        padding: 5px;
+        border-radius: 5px;
+      }
+      .underBtn {
+        font-size: 10px;
+      }
+      .googleReg {
+        padding: 0 5px;
+        img {
+          width: 10px;
+        }
+        h4 {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+}

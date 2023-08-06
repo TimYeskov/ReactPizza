@@ -12,17 +12,22 @@ interface cartSliceState {
   cartItems: CartItemsType[];
   totalPrice: number;
   orderItem: CartItemsType[];
+  login: boolean;
 }
 const initialState: cartSliceState = {
   cartItems: [],
   totalPrice: 0,
   orderItem: [],
+  login: false,
 };
 
 export const cartSlice = createSlice({
   name: "cart",
   initialState,
   reducers: {
+    openLogin(state, action: PayloadAction<boolean>) {
+      state.login = action.payload;
+    },
     addItemToCart(state, action: PayloadAction<CartItemsType>) {
       const findItem = state.cartItems.find(
         (obj) => obj.hashedPizza === action.payload.hashedPizza
@@ -67,6 +72,7 @@ export const cartSlice = createSlice({
   },
 });
 export const {
+  openLogin,
   addItemToCart,
   plusItem,
   minusItem,
