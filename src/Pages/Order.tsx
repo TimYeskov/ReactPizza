@@ -22,9 +22,10 @@ const Order: React.FC = () => {
     changeOrderDetail(!orderDetail);
     setActive(index);
   };
-  console.log(orderItem.length, "orderItem");
-  console.log(cartItems.length, "cartItems");
-  if (orderItem.length >= 0 || cartItems.length <= 0) {
+
+  if (orderItem.length <= 0) {
+    return <EmptyPage />;
+  } else
     return (
       <div className="container">
         <div className="order">
@@ -34,9 +35,9 @@ const Order: React.FC = () => {
                 <h1>Оформление заказа</h1>
                 <h2>Вы заказали</h2>
                 <div className="order-item__block">
-                  {orderItem.length === 0
-                    ? cartItems.map((obj) => <CartItem {...obj} />)
-                    : orderItem.map((obj) => <CartItem {...obj} />)}
+                  {cartItems.map((obj) => (
+                    <CartItem {...obj} />
+                  ))}
                 </div>
               </div>
               <div className="order-type">
@@ -51,9 +52,10 @@ const Order: React.FC = () => {
                       {value}
                     </button>
                   ))}
-                  {/* <button className='button button--active'>Доставка</button>
-                              <button className='button'>Самовывоз (- 20%)</button> */}
+                  {/* <button className="button button--active">Доставка</button>
+                  <button className="button">Самовывоз (- 20%)</button> */}
                 </div>
+
                 {orderDetail ? (
                   <div className="order-type__summary">
                     <div className="first">
@@ -102,8 +104,6 @@ const Order: React.FC = () => {
         </div>
       </div>
     );
-  } else console.log(orderItem.length, cartItems.length);
-  return <EmptyPage />;
 };
 
 export default Order;

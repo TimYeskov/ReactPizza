@@ -6,11 +6,7 @@ import "../scss/App.scss";
 import { useParams } from "react-router";
 import OrderBlock from "../Components/OrderBlock";
 import { Link } from "react-router-dom";
-import {
-  addItemToCart,
-  addItemFromItemPage,
-  CartItemsType,
-} from "../redux/slices/cartSlice";
+import { addItemToCart, CartItemsType } from "../redux/slices/cartSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { itemsType } from "../redux/slices/pizzaSlice";
 import { RootState } from "../redux/store";

@@ -4,17 +4,23 @@ import { Link } from "react-router-dom";
 import CartItem from "../Components/CartItem";
 import EmptyCart from "./EmptyPage";
 import Range from "../Components/Range";
-import { RootState } from "../redux/store";
+import { RootState, useAppDispatch } from "../redux/store";
+import { addItemToOrder } from "../redux/slices/cartSlice";
 
 const Cart: React.FC = () => {
   const dispatch = useDispatch();
-  const cartItems = useSelector(
-    (state: RootState) => state.cartSlice.cartItems
+  const { cartItems, orderItem } = useSelector(
+    (state: RootState) => state.cartSlice
   );
   const totalPrice = useSelector(
     (state: RootState) => state.cartSlice.totalPrice
   );
   const EndirimPrice = totalPrice - 3;
+  const orderButton = () => {
+    dispatch(addItemToOrder(cartItems));
+    console.log("orderItem", orderItem.length);
+    console.log("cartItems", cartItems.length);
+  };
   if (cartItems.length > 0) {
     return (
       <div className="container">
@@ -63,7 +69,7 @@ const Cart: React.FC = () => {
                 <h2>{totalPrice < 67 ? totalPrice : EndirimPrice} ₼</h2>
               </div>
               <Link to="/Order">
-                <button>Оформить заказ</button>
+                <button onClick={() => orderButton()}>Оформить заказ</button>
               </Link>
             </div>
           </div>

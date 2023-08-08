@@ -66,8 +66,12 @@ export const cartSlice = createSlice({
         return Math.round(obj.price * obj.count + sum);
       }, 0);
     },
-    addItemFromItemPage(state, action) {
-      state.orderItem.push({ ...action.payload });
+    addItemToOrder(state, action) {
+      state.orderItem.push(action.payload);
+    },
+    PreparedOrder(state) {
+      state.orderItem = [];
+      state.cartItems = [];
     },
   },
 });
@@ -77,7 +81,8 @@ export const {
   plusItem,
   minusItem,
   removeItem,
-  addItemFromItemPage,
+  addItemToOrder,
+  PreparedOrder,
 } = cartSlice.actions;
 
 export default cartSlice.reducer;
