@@ -24,16 +24,20 @@ export const Login = () => {
         <div className="container__wrapper">
           <div className="container__login">
             <form>
-              <input type="text" name="Email" placeholder="johndoe@gmail.com" />
-              <input type="password" name="password" placeholder="password" />
+              <input
+                type="text"
+                name="Email"
+                placeholder="ilovepizza@gmail.com"
+              />
+              <input type="password" name="password" placeholder="пароль" />
             </form>
-            <div className="container__settings">
+            {/* <div className="container__settings">
               <h4>Remember Me</h4>
               <a>Forgot Password</a>
-            </div>
-            <button className="loginBtn">LOGIN</button>
+            </div> */}
+            <button className="loginBtn">Войти</button>
             <h4 className="underBtn">
-              Don’t have an Account? <span>Register Here</span>
+              Нет аккаунта? <span>Регситрация в один клик</span>
             </h4>
           </div>
         </div>

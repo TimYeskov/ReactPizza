@@ -15,6 +15,7 @@ import CompletedOrder from "./Components/CompletedOrder";
 import { Login } from "./Components/Login";
 import { useSelector } from "react-redux";
 import { RootState } from "./redux/store";
+import Header2 from "./Components/Header2";
 const App = () => {
   const login = useSelector((state: RootState) => state.cartSlice.login);
 
@@ -22,7 +23,7 @@ const App = () => {
     <>
       {login && <Login />}
       <div className="wrapper">
-        <Header />
+        <Header2 />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/Delivery" element={<Delivery />} />

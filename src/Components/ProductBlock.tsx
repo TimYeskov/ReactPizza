@@ -96,12 +96,12 @@ const ProductBlock: React.FC<itemsType> = ({
         </div>
       </div>
 
-      <div className="product__rating">
+      {/* <div className="product__rating">
         <img src="./img/star.svg" />
         <img src="./img/star.svg" />
         <img src="./img/star.svg" />
         <img src="./img/emptystar.svg" />
-      </div>
+      </div> */}
       <div className="product__price">
         <p>{price[activePriceIndex]} ₼/кг</p>
         <span>За 500гр.</span>

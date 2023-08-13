@@ -1,31 +1,50 @@
 .root {
-    position: relative;
-    @media (max-width: 500px) {
-        display: none;
+  position: relative;
+  @media (max-width: 500px) {
+    display: none;
+  }
+  .icon {
+    width: 18px;
+    height: 18px;
+    opacity: 0.3;
+    position: absolute;
+    left: 14px;
+    top: 16px;
+    @media (max-width: 800px) {
+      top: 8px;
     }
-    .icon {
-        width: 18px;
-        height: 18px;
-        opacity: 0.3;
-        position: absolute;
-        left: 14px;
-        top: 16px;
+  }
+  .cancel {
+    width: 18px;
+    opacity: 0.3;
+    position: absolute;
+    height: 18px;
+    right: 15px;
+    top: 15px;
+    cursor: pointer;
+    @media (max-width: 800px) {
+      top: 8px;
     }
-    .cancel {
-        width: 18px;
-        opacity: 0.3;
-        position: absolute;
-        height: 18px;
-        right: 15px;
-        top: 15px;
-        cursor: pointer;
-    }
+  }
 }
 .input {
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    padding: 12px 20px;
-    width: 200px;
-    border-radius: 10px;
-    font-size: 16px;
-    padding-left: 42px;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  padding: 12px 20px;
+  width: 200px;
+  border-radius: 10px;
+  font-size: 16px;
+  padding-left: 42px;
+  transition: all 0.3s ease-in-out;
+  @media (max-width: 800px) {
+    padding: 6px 10px;
+    font-size: 12px;
+    padding-left: 40px;
+  }
+}
+.input:hover {
+  border-color: #00ac4e;
+}
+.input:focus {
+  outline: none;
+  border-color: #00ac4e;
 }
